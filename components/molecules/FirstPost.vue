@@ -14,6 +14,7 @@ export default class FirstPost extends Vue {
   @Prop({ required: true }) readonly post!: Post
 }
 </script>
+
 <style lang="scss" scoped>
 .first-image {
   margin-left: 8px;
@@ -36,12 +37,8 @@ export default class FirstPost extends Vue {
   font-weight: 600;
   font-size: 12px;
   line-height: 17px;
-  /* or 142% */
-
   letter-spacing: -0.3px;
-
   color: #ffffff;
-
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.32);
 }
 </style>

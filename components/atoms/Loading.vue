@@ -1,5 +1,9 @@
 <template>
-  <div class="saving"><span>•</span><span>•</span><span>•</span></div>
+  <div class="saving">
+    <span>•</span>
+    <span>•</span>
+    <span>•</span>
+  </div>
 </template>
 
 <script lang="ts">
@@ -17,22 +21,19 @@ export default class Loading extends Vue {}
 /* stylelint-disable */
 @keyframes blink {
   /**
-     * At the start of the animation the dot
-     * has an opacity of .2
+     * At the start of the animation the dot has an opacity of .2
      */
   0% {
     opacity: 0.2;
   }
   /**
-     * At 20% the dot is fully visible and
-     * then fades out slowly
+     * At 20% the dot is fully visible and then fades out slowly
      */
   20% {
     opacity: 1;
   }
   /**
-     * Until it reaches an opacity of .2 and
-     * the animation can start again
+     * Until it reaches an opacity of .2 and the animation can start again
      */
   100% {
     opacity: 0.2;

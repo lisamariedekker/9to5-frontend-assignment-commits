@@ -32,6 +32,7 @@ export default class OtherPost extends Vue {
   }
 }
 </script>
+
 <style lang="scss" scoped>
 .other-post {
   display: flex;
@@ -53,9 +54,7 @@ export default class OtherPost extends Vue {
   font-weight: 500;
   font-size: 10px;
   line-height: 14px;
-
   letter-spacing: -0.2px;
-
   color: #000000;
 }
 .other-date {
@@ -64,10 +63,7 @@ export default class OtherPost extends Vue {
   font-weight: normal;
   font-size: 10px;
   line-height: 14px;
-  /* identical to box height, or 140% */
-
   letter-spacing: -0.2px;
-
   color: #8e8e93;
 }
 </style>
