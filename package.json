@@ -29,7 +29,7 @@
     ]
   },
   "scripts": {
-    "dev": "GRAPHQL_URL=https://paragrapp-production.herokuapp.com/graphql nuxt",
+    "dev": "nuxt",
     "build": "nuxt build",
     "buildStaging": "nuxt build",
     "buildProduction": "nuxt build",
