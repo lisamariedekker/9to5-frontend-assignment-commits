@@ -46,8 +46,7 @@ export default class AppExample extends Vue {
 
   openPost(post: Post | null) {
     if (post !== null) {
-      const postId = post.id
-      this.$router.push({ name: 'post___nl', params: { post: postId } })
+      this.$router.push({ name: 'post___nl', params: { post: post.id } })
     }
   }
 

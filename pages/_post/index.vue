@@ -1,5 +1,5 @@
 <template>
-  <PostView />
+  <PostView url="https://district8.net" />
 </template>
 
 <script lang="ts">

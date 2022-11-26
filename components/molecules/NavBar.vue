@@ -1,13 +1,15 @@
 <template>
   <div class="navbar">
-    <button v-if="back" class="back" @click="$emit('back')">
-      <BaseImage
-        image="icons/ic_arrow_right.svg"
-        height="24px"
-        width="24px"
-        class="flip"
-      />
-    </button>
+    <NuxtLink to="/">
+      <button v-if="back" class="back" @click="$emit('back')">
+        <img
+          src="../../assets/images/icons/ic_arrow_right.svg"
+          :height="24"
+          :width="24"
+          class="flip"
+        />
+      </button>
+    </NuxtLink>
     <img v-if="faviconUrl" :src="faviconUrl" class="favicon" />
   </div>
 </template>
@@ -53,5 +55,9 @@ export default class Navbar extends Vue {
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.flip {
+  transform: rotate(180deg);
 }
 </style>

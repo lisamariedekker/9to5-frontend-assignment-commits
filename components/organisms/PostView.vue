@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NavBar :url="url" :back="true" />
     <Loading v-if="$apollo.queries.post.loading" />
     <div v-else-if="post" class="post-details" @click="$emit('open')">
       <img :src="post.featuredMedia" class="detail-image" />
@@ -13,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import PostQuery from '@/graphql/queries/PostQuery.gql'
 import { Post, PostInput } from '~/types/graphql/types'
 
@@ -24,7 +25,7 @@ import { Post, PostInput } from '~/types/graphql/types'
       variables() {
         const post: PostInput = {
           id: this.$route.params.post,
-          url: 'https://district8.net',
+          url: this.url,
         }
         const variables = { post }
         return variables
@@ -33,6 +34,7 @@ import { Post, PostInput } from '~/types/graphql/types'
   },
 })
 export default class PostView extends Vue {
+  @Prop({ required: true }) readonly url!: string
   post: Post | null = null
 
   date(): string {
