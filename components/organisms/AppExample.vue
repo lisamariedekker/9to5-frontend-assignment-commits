@@ -73,9 +73,4 @@ export default class AppExample extends Vue {
   height: 100%;
   width: 100%;
 }
-.divider {
-  background-color: #f1f1f1;
-  height: 1px;
-  width: 100%;
-}
 </style>
