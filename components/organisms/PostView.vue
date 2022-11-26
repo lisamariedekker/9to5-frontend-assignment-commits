@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="post-details" @click="$emit('open')">
+    <Loading v-if="$apollo.queries.post.loading" />
+    <div v-else-if="post" class="post-details" @click="$emit('open')">
       <img :src="post.featuredMedia" class="detail-image" />
       <div class="detail-post">
         <div class="detail-title">{{ post.title }}</div>
@@ -12,15 +13,30 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { Post } from '~/types/graphql/types'
+import { Component, Vue } from 'nuxt-property-decorator'
+import PostQuery from '@/graphql/queries/PostQuery.gql'
+import { Post, PostInput } from '~/types/graphql/types'
 
-@Component
+@Component({
+  apollo: {
+    post: {
+      query: PostQuery,
+      variables() {
+        const post: PostInput = {
+          id: this.$route.params.post,
+          url: 'https://district8.net',
+        }
+        const variables = { post }
+        return variables
+      },
+    },
+  },
+})
 export default class PostView extends Vue {
-  @Prop({ required: true }) readonly post!: Post
+  post: Post | null = null
 
   date(): string {
-    if (!this.post.date) return ''
+    if (!this.post?.date) return ''
     const date = new Date(this.post.date)
 
     const options: Intl.DateTimeFormatOptions = {
@@ -32,6 +48,7 @@ export default class PostView extends Vue {
   }
 }
 </script>
+
 <style lang="scss" scoped>
 .detail-image {
   width: 100%;
@@ -47,10 +64,7 @@ export default class PostView extends Vue {
   font-weight: 600;
   font-size: 12px;
   line-height: 17px;
-  /* or 142% */
-
   letter-spacing: -0.3px;
-
   color: #000000;
 }
 .detail-content {
@@ -61,9 +75,7 @@ export default class PostView extends Vue {
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
-
   letter-spacing: -0.2px;
-
   color: #000000;
 }
 .detail-date {
@@ -72,10 +84,7 @@ export default class PostView extends Vue {
   font-weight: normal;
   font-size: 10px;
   line-height: 14px;
-  /* identical to box height, or 140% */
-
   letter-spacing: -0.2px;
-
   color: #8e8e93;
 }
 </style>

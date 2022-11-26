@@ -3,7 +3,7 @@
     <NavBar :url="url" />
     <Loading v-if="$apollo.queries.posts.loading" />
     <div v-else-if="posts" class="posts">
-      <BaseDivider />
+      <BaseDivider class="mt-0-5" />
       <FirstPost
         v-if="firstPost"
         :post="firstPost"
@@ -45,8 +45,10 @@ export default class AppExample extends Vue {
   posts: Array<Post> | null = null
 
   openPost(post: Post | null) {
-    // TODO
-    console.log(post?.content)
+    if (post !== null) {
+      const postId = post.id
+      this.$router.push({ name: 'post___nl', params: { post: postId } })
+    }
   }
 
   get firstPost(): Post | null {

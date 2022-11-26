@@ -52,6 +52,19 @@ export type RootQueryTypePostsArgs = {
   posts: ListPostsInput;
 };
 
+export type PostQueryVariables = Exact<{
+  post: PostInput;
+}>;
+
+
+export type PostQuery = (
+  { __typename?: 'RootQueryType' }
+  & { post?: Maybe<(
+    { __typename?: 'Post' }
+    & Pick<Post, 'id' | 'title' | 'content' | 'date' | 'featuredMedia'>
+  )> }
+);
+
 export type PostsQueryVariables = Exact<{
   posts: ListPostsInput;
 }>;
