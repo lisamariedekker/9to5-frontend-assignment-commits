@@ -1,0 +1,210 @@
+// neutral
+$white: #fff;
+$error: red;
+
+// primary
+
+$navy: #051c2a;
+$text-grey: #5c5c5c;
+$divider-grey: #d9d9d9;
+$light-grey: #f1f1f1;
+$bleached-orange: #ffe2c8;
+$bleached-denim: #c0e7ff;
+
+$font-title: 'Libre Baskerville', serif;
+$font-default: 'Inter', sans-serif;
+
+// breakpoints
+$breakpoint-sm: 768px;
+$breakpoint-md: 1280px;
+$breakpoint-lg: 1920px;
+
+// text-styles
+
+%text-style-title1 {
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 42px;
+  letter-spacing: -0.23px;
+  @media only screen and (min-width: $breakpoint-sm) {
+    font-size: 56px;
+    line-height: 68px;
+    letter-spacing: -0.08px;
+  }
+}
+
+%text-style-title2 {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 60px;
+
+  letter-spacing: -0.02px;
+}
+
+%text-style-title3 {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.05px;
+  @media only screen and (min-width: $breakpoint-sm) {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.11px;
+  }
+}
+
+%text-style-title3-desktop {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: normal;
+}
+
+%text-style-logo {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: -0.05px;
+}
+
+%text-style-body {
+  font-family: $font-default;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 28px;
+}
+
+%text-style-callout {
+  font-family: $font-default;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+%text-style-subhead {
+  font-family: $font-default;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  /* identical to box height, or 160% */
+
+  letter-spacing: -0.23px;
+}
+
+%text-style-footnote {
+  font-family: $font-default;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  /* identical to box height, or 154% */
+
+  letter-spacing: -0.08px;
+}
+%text-style-caption1 {
+  font-family: $font-default;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
+}
+%text-style-caption2 {
+  font-family: $font-default;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+%text-style-little-detail {
+  font-family: $font-default;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+// z-index
+$z-index-jumbotron-img: 300;
+$z-index-jumbotron-img-bg: 200;
+$z-index-cta: 100;
+$z-index-feature-accessibility: 80;
+$z-index-feature-same-content: 79;
+$z-index-feature-extended-involvement: 78;
+
+// margins
+.ml-5 {
+  margin-left: 5rem;
+}
+.mr-5 {
+  margin-right: 5rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-1-5 {
+  margin-top: 1.5rem;
+}
+
+.mt-2 {
+  margin-top: 2rem !important;
+}
+.mt-1 {
+  margin-top: 1rem !important;
+}
+
+.mt-0-5 {
+  margin-top: 0.5rem;
+}
+
+.mt-2-5 {
+  margin-top: 2.5rem;
+}
+
+.mt-3-5 {
+  margin-top: 3.5rem;
+}
+
+.mr-0-5 {
+  margin-right: 0.5rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.mr-0-25 {
+  margin-right: 0.25rem;
+}
+
+.mr-1-5 {
+  margin-right: 1.5rem;
+}
+
+.ml-1-5 {
+  margin-left: 1.5rem;
+}
+
+.ml-0-5 {
+  margin-left: 0.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.mb-0-5 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-1-5 {
+  margin-bottom: 1.5rem;
+}

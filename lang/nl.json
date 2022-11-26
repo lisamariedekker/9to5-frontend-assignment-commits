@@ -1,0 +1,91 @@
+{
+  "app": {
+    "name": "Paragr.app",
+    "check-price": "Bekijk prijs",
+    "divider": "/",
+    "e-mail" : "info@9to5.software",
+    "cancel": "Annuleer",
+    "optional": "Optioneel",
+    "for-wordpress": " Voor WordPress"
+  },
+  "jumbotron": {
+    "title": "Breid je nieuwsplatform uit met een native app",
+    "description": "Bij Paragrapp kunnen wij je nieuwswebsite uitbreiden met een native app voor iOS en Android. Zolang je een WordPress website hebt kunnen we binnen een mum van tijd een app ernaast hebben staan.",
+    "read-more": " Lees verder"
+  },
+  "usps": {
+    "synchronous-title": "Synchroon met je website",
+    "synchronous-description": "De nieuwsberichten in de app zullen altijd gelijk zijn aan de nieuwsberichten op je website. Zo is alles altijd synchroon.",
+    "live-quickly-title": "Binnen enkele dagen live",
+    "live-quickly-description": "Wij doen het harde werk en zorgen ervoor dat jouw app binnen enkele dagen live staat. Beloofd.",
+    "earn-by-ads-title": "Verdien met advertenties",
+    "earn-by-ads-description": "Afhankelijk van je voorkeur is er de mogelijkheid om Google Ads te gebruiken in de app. Zo verdien je er ook nog wat aan."
+  },
+  "call-to-action-small": "Bekijk wat het je gaat kosten om jouw app live te zetten",
+  "features": {
+    "accessibility-title": "De toegankelijkheid van een native app",
+    "accessibility-description": "De app voor Android en iOS is makkelijk toegankelijk. Je lezers hoeven nooit meer naar hun browser te gaan, het webadres in te typen en te wachten tot de website geladen is. Ze drukken simpelweg op de herkenbare app icoon van je nieuwsapp.",
+    "same-content-title": "Dezelfde content als op jouw website",
+    "same-content-description": "Alle nieuwsberichten die je publiceert via WordPress worden ook direct in de app getoond aan je lezers. Ook als je besluit om een bericht te verwijderen, verdwijnt deze ook uit de app. De website en app lopen sycnhroon, waarin je WordPress-website leidend is.",
+    "extend-involvement-title": "Verhoog de betrokkenheid met notificaties",
+    "extend-involvement-description": "Lezers kunnen ervoor kiezen om push notificiaties in te stellen en bij iedere nieuw bericht een notificatie te krijgen. Op deze manier verhoog je de betrokkenheid en uiteindelijk ook je inkomsten van je advertenties."
+  },
+  "requirements" : {
+    "title": "Belangrijke benodigdheden voordat we kunnen beginnen",
+    "stores-title": "App Store en Google Play",
+    "stores-description": "Om jouw app te kunnen publiceren heb je een App Store en Google Play account nodig. Hiermee kun je jouw app in de stores zetten. Geen zorgen, hierin zullen we je ook in ondersteunen.",
+    "logo-and-name-title": "Logo en naam",
+    "logo-and-name-description": "Bedenk van tevoren hoe uw app moet gaan heten. Daarnaast is het ook handig om alvast na te denken over je logo in een app icoon.",
+    "app-text-title": "Tekst over de app",
+    "app-text-description": "Het is handig om gebruikers vooraf te laten weten wat voor een nieuws je publiceert. Bedenk daarom vooraf een korte tekst die het onderwerp van je app goed omschrijft.",
+    "filters-title": "Filters en categorieën",
+    "filters-description": "Waarschijnlijk maak je gebruik van categorieën op je WordPress site. Geef aan welke van deze categorieën je graag in de app wilt tonen, dan zorgen wij daarvoor!",
+    "branding-title": "Kleuren huisstijl",
+    "branding-description": "Om je app goed aan te laten sluiten bij je nieuwsplatform raden we je aan om de kleuren vanuit je huisstijl te gebruiken in de app.",
+    "google-ad-title": "Google ad units",
+    "google-ad-description": "Adverteren in je app? Dan moet je beschikken over een Google Ad Unit. Op Google Ads kun je hier meer informatie over vinden."
+  },
+  "call-to-action" : {
+    "title": "Klaar om je nieuwsplatform uit te breiden met een app?",
+    "price-details": "per maand, excl. btw",
+    "action": "Aan de slag",
+    "addition": "Heb je andere wensen of specifieke eisen laat het ons vooral weten. Dan gaan we samen opzoek naar de juiste oplossing.",
+    "native-app": "Een native app voor iOS en voor Android",
+    "continuous-udpates": "Regelmatig updates met bug fixes en ondersteuning voor nieuwe features",
+    "push-notifiactions": "Push notificaties",
+    "contact-form": "Contactformulier voor tips",
+    "details-page": "Informatiepagina",
+    "youtube": "YouTube video's",
+    "embedded-tweets": "Embedded tweets",
+    "filter-on-categories": "Filteren op categorieën",
+    "share-via-app-links": "Delen via app links",
+    "footnote": "Heb je andere wensen of specifieke eisen laat het ons vooral weten. Dan gaan we samen opzoek naar de juiste oplossing."
+  },
+  "the-footer": {
+    "footnote": "Binnen no-time een eigen app voor iOS en Android!",
+    "copyright": "© 9to5 software 2021"
+  },
+  "contact": {
+    "title": "Leuk dat je interesse hebt!\n Laten we eens kennismaken.",
+    "full-name": "Volledige naam",
+    "full-name-placeholder": "Jan Jansen",
+    "e-mail-address": "E-mailadres",
+    "e-mail-address-placeholder": "jan.jansen@voorbeeld.nl",
+    "website": "Website",
+    "website-placeholder": "https://www.jouw-website.com",
+    "questions-or-remarks": "Vragen of opmerkingen",
+    "questions-or-remarks-placeholder": "Laat hier jouw vraag achter",
+    "optional": "Optioneel",
+    "send": "Verstuur",
+    "default-error": "Er ging iets mis tijdens het versturen. Probeer het nog een keer",
+    "success-title": "We hebben je gegevens in goede orde ontvangen. We nemen snel contact met je op!",
+    "success-description": "Normaal gesproken nemen we nog dezelfde week contact op om het over jouw website en app te hebben.",
+    "success-action-label": "Terug naar de website"
+  },
+  "wordpress-example": {
+    "title": "Benieuwd naar hoe je app er uit zal komen te zien?",
+    "description": "Kopieer en plak de url van jouw website",
+    "footnote": "Zorg ervoor dat je WordPress Rest API ingeschakeld staat en niet afgeschermd is.",
+    "input-placeholder": "https://www.jouw-website.com"
+  }
+}
