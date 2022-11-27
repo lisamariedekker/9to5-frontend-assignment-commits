@@ -1,6 +1,5 @@
 <template>
-  <div class="post-view">
-    <NavBar :url="url" :back="true" />
+  <div>
     <Loading v-if="$apollo.queries.post.loading" />
     <div v-else-if="post" class="post-details" @click="$emit('open')">
       <BaseDivider class="mt-0-5" />
@@ -53,14 +52,6 @@ export default class PostView extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.post-view {
-  background-color: white;
-  height: 100%;
-}
-.post-details {
-  width: 100%;
-  height: 100%;
-}
 .detail-image {
   margin-left: 8px;
   margin-right: 8px;

@@ -1,6 +1,5 @@
 <template>
-  <div ref="appExample" class="app-example">
-    <NavBar :url="url" />
+  <div>
     <Loading v-if="$apollo.queries.posts.loading" />
     <div v-else-if="posts" class="posts">
       <BaseDivider class="mt-0-5" />
@@ -64,13 +63,4 @@ export default class AppExample extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-.app-example {
-  background-color: white;
-  height: 100%;
-}
-.posts {
-  height: 100%;
-  width: 100%;
-}
-</style>
+<style lang="scss" scoped></style>

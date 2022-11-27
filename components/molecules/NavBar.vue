@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <NuxtLink to="/">
-      <button v-if="back" class="back" @click="$emit('back')">
+      <button v-if="$route.path !== '/'" class="back" @click="$emit('back')">
         <img
           src="../../assets/images/icons/ic_arrow_right.svg"
           :height="24"

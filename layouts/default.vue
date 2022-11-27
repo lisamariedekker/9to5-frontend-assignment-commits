@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <div class="default">
+    <NavBar url="https://district8.net" />
     <Nuxt />
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 html {
   font-family: $font-default;
   font-size: 16px;
@@ -21,5 +22,10 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.default {
+  background-color: white;
+  height: 100%;
 }
 </style>
