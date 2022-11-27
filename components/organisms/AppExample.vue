@@ -1,15 +1,15 @@
 <template>
   <div>
     <Loading v-if="$apollo.queries.posts.loading" />
-    <div v-else-if="posts" class="posts">
+    <div v-else-if="posts">
       <BaseDivider class="mt-0-5" />
       <FirstPost
         v-if="firstPost"
         :post="firstPost"
-        class="mt-1"
+        class="mt-1 mb-1"
         @open="openPost(firstPost)"
       />
-      <BaseDivider class="mt-1" />
+      <BaseDivider />
       <OtherPost
         v-for="post in otherPosts"
         :key="post.id"
@@ -57,8 +57,10 @@ export default class AppExample extends Vue {
   }
 
   get otherPosts(): Array<Post> | null {
-    // TODO slice first item from array, since this is already shown in FirstPost
-    return this.posts
+    if (this.posts == null || this.posts.length === 0) {
+      return null
+    }
+    return this.posts.slice(1)
   }
 }
 </script>
