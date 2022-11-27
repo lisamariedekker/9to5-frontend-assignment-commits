@@ -29,8 +29,6 @@ export default class Navbar extends Vue {
     if (!hostname) return null
     return 'https://api.faviconkit.com/' + hostname
   }
-
-  // TODO implement back button to go back from PostView to AppExample
 }
 </script>
 

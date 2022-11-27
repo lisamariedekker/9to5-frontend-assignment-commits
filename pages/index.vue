@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <AppExample url="https://district8.net" />
-  </div>
+  <AppExample url="https://district8.net" />
 </template>
 
 <script lang="ts">

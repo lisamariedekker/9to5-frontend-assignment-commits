@@ -67,7 +67,6 @@ export default class AppExample extends Vue {
 <style lang="scss" scoped>
 .app-example {
   background-color: white;
-  overflow-y: scroll;
   height: 100%;
 }
 .posts {

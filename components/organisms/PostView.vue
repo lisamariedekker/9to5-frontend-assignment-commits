@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div class="post-view">
     <NavBar :url="url" :back="true" />
     <Loading v-if="$apollo.queries.post.loading" />
     <div v-else-if="post" class="post-details" @click="$emit('open')">
-      <img :src="post.featuredMedia" class="detail-image" />
+      <BaseDivider class="mt-0-5" />
+      <img :src="post.featuredMedia" class="detail-image mt-1" />
       <div class="detail-post">
         <div class="detail-title">{{ post.title }}</div>
         <div class="detail-date">{{ date() }}</div>
@@ -52,8 +53,20 @@ export default class PostView extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.detail-image {
+.post-view {
+  background-color: white;
+  height: 100%;
+}
+.post-details {
   width: 100%;
+  height: 100%;
+}
+.detail-image {
+  margin-left: 8px;
+  margin-right: 8px;
+  width: calc(100% - 16px);
+  border-radius: 6px;
+  object-fit: contain;
 }
 .detail-post {
   padding-left: 8px;

@@ -14,10 +14,6 @@ export default class Loading extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.loading-display-block {
-  padding: 2rem;
-}
-
 /* stylelint-disable */
 @keyframes blink {
   /**
