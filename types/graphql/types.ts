@@ -62,6 +62,10 @@ export type PostQuery = (
   & { post?: Maybe<(
     { __typename?: 'Post' }
     & Pick<Post, 'id' | 'title' | 'content' | 'date' | 'featuredMedia'>
+    & { author?: Maybe<(
+      { __typename?: 'Author' }
+      & Pick<Author, 'id' | 'name'>
+    )> }
   )> }
 );
 
@@ -74,6 +78,6 @@ export type PostsQuery = (
   { __typename?: 'RootQueryType' }
   & { posts?: Maybe<Array<Maybe<(
     { __typename?: 'Post' }
-    & Pick<Post, 'date' | 'content' | 'featuredMedia' | 'id' | 'title'>
+    & Pick<Post, 'date' | 'featuredMedia' | 'id' | 'title'>
   )>>> }
 );

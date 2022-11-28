@@ -19,6 +19,24 @@ $breakpoint-md: 1280px;
 $breakpoint-lg: 1920px;
 
 // text-styles
+.headline {
+  font-family: $font-default;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+}
+.subtitle {
+  font-family: $font-default;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+  color: #8e8e93;
+}
+.content {
+  font-family: $font-default;
+  font-size: 15px;
+  line-height: 20px;
+}
 %text-style-title1 {
   font-family: $font-title;
   font-weight: 400;
@@ -133,6 +151,9 @@ $z-index-feature-same-content: 79;
 $z-index-feature-extended-involvement: 78;
 
 // margins
+.mt-0-25 {
+  margin-top: 0.25rem;
+}
 .mt-0-5 {
   margin-top: 0.5rem;
 }

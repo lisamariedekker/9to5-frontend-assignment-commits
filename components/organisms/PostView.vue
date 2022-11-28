@@ -1,13 +1,12 @@
 <template>
   <div>
     <Loading v-if="$apollo.queries.post.loading" />
-    <div v-else-if="post" class="post-details" @click="$emit('open')">
-      <BaseDivider class="mt-0-5" />
-      <img :src="post.featuredMedia" class="detail-image mt-1" />
-      <div class="detail-post">
-        <div class="detail-title">{{ post.title }}</div>
-        <div class="detail-date">{{ date() }}</div>
-        <div class="detail-content mt-1">{{ post.content }}</div>
+    <div v-else-if="post" @click="$emit('open')">
+      <BaseImage :image="post.featuredMedia" />
+      <div class="mt-1-5 mr-1 ml-1">
+        <div class="headline">{{ post.title }}</div>
+        <div class="subtitle mt-0-25">{{ author }} - {{ date() }}</div>
+        <div class="content mt-1">{{ post.content }}</div>
       </div>
     </div>
   </div>
@@ -48,49 +47,16 @@ export default class PostView extends Vue {
     }
     return date.toLocaleDateString(this.$i18n.locale, options)
   }
+
+  get author(): string | null {
+    if (!this.post?.author && !this.post?.author?.name) {
+      return null
+    }
+    return this.post.author.name || ''
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-.detail-image {
-  margin-left: 8px;
-  margin-right: 8px;
-  width: calc(100% - 16px);
-  border-radius: 6px;
-  object-fit: contain;
-}
-.detail-post {
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-top: 8px;
-}
-.detail-title {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 17px;
-  letter-spacing: -0.3px;
-  color: #000000;
-}
-.detail-content {
-  overflow: hidden;
-  width: 100%;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: -0.2px;
-  color: #000000;
-}
-.detail-date {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: -0.2px;
-  color: #8e8e93;
-}
+@use '../../assets/styles/globals.scss';
 </style>

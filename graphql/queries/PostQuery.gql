@@ -5,5 +5,9 @@ query post ($post: PostInput!) {
     content
     date
     featuredMedia
+    author {
+      id
+      name
+    }
   }
 }
