@@ -1,10 +1,15 @@
 <template>
   <div>
-    <div class="other-post" @click="$emit('open')">
-      <img :src="post.featuredMedia" class="other-image" />
+    <div class="list-post" @click="$emit('open')">
+      <BaseImage
+        :image="post.featuredMedia"
+        :width="96"
+        :apply-radius="true"
+        class="mr-0-5 ml-0-5"
+      />
       <div class="other-post-content">
-        <div class="other-title">{{ post.title }}</div>
-        <div class="other-date">{{ date() }}</div>
+        <div class="list-title">{{ post.title }}</div>
+        <div class="list-date">{{ date() }}</div>
       </div>
     </div>
     <BaseDivider />
@@ -16,7 +21,7 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import { Post } from '~/types/graphql/types'
 
 @Component
-export default class OtherPost extends Vue {
+export default class PostListItem extends Vue {
   @Prop({ required: true }) readonly post!: Post
 
   date(): string {
@@ -34,36 +39,24 @@ export default class OtherPost extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.other-post {
+.list-post {
   display: flex;
   width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
   cursor: pointer;
 }
-.other-image {
-  margin-left: 8px;
-  margin-right: 8px;
-  width: 96px;
-  border-radius: 4px;
-  object-fit: contain;
-}
-.other-title {
+.list-title {
   font-family: Inter;
-  font-style: normal;
   font-weight: 500;
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: -0.2px;
-  color: #000000;
+  font-size: 12px;
+  line-height: 16px;
 }
-.other-date {
+.list-date {
   font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
   font-size: 10px;
   line-height: 14px;
   letter-spacing: -0.2px;
-  color: #8e8e93;
+  color: $subtitle-grey;
 }
 </style>
