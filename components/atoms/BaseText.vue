@@ -36,9 +36,6 @@ p {
 .little-detail {
   @extend %text-style-little-detail;
 }
-.center {
-  text-align: center;
-}
 .right {
   text-align: right;
 }

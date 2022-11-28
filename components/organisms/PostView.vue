@@ -2,6 +2,7 @@
   <div>
     <Loading v-if="$apollo.queries.post.loading" />
     <div v-else-if="post" @click="$emit('open')">
+      <BaseDivider class="mt-0-5 mb-1" />
       <BaseImage :image="post.featuredMedia" />
       <div class="mt-1-5 mr-1 ml-1">
         <div class="headline">{{ post.title }}</div>
