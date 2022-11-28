@@ -2,7 +2,6 @@
   <div>
     <Loading v-if="$apollo.queries.posts.loading" />
     <div v-else-if="posts">
-      <BaseDivider class="mt-0-5 mb-1" />
       <div class="first-post mb-1" @click="openPost(firstPost)">
         <BaseImage
           v-if="firstPost"
