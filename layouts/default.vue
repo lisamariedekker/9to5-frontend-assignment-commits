@@ -29,4 +29,14 @@ html {
   background-color: white;
   height: 100%;
 }
+.layout {
+  width: 60%;
+  margin: 0 auto;
+  @media (max-width: $breakpoint-md) {
+    width: 80%;
+  }
+  @media (max-width: $breakpoint-sm) {
+    width: 100%;
+  }
+}
 </style>
