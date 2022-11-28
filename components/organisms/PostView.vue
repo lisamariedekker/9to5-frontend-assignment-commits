@@ -13,8 +13,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from 'nuxt-property-decorator'
 import PostQuery from '@/graphql/queries/PostQuery.gql'
+import { baseUrl } from '../../settings'
 import { Post, PostInput } from '~/types/graphql/types'
 
 @Component({
@@ -24,7 +25,7 @@ import { Post, PostInput } from '~/types/graphql/types'
       variables() {
         const post: PostInput = {
           id: this.$route.params.post,
-          url: this.url,
+          url: baseUrl,
         }
         const variables = { post }
         return variables
@@ -33,7 +34,6 @@ import { Post, PostInput } from '~/types/graphql/types'
   },
 })
 export default class PostView extends Vue {
-  @Prop({ required: true }) readonly url!: string
   post: Post | null = null
 
   date(): string {

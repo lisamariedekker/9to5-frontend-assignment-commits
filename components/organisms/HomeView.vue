@@ -21,8 +21,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from 'nuxt-property-decorator'
 import PostsQuery from '@/graphql/queries/PostsQuery.gql'
+import { baseUrl } from '../../settings'
 import { ListPostsInput, Post } from '~/types/graphql/types'
 
 @Component({
@@ -31,7 +32,7 @@ import { ListPostsInput, Post } from '~/types/graphql/types'
       query: PostsQuery,
       variables() {
         const posts: ListPostsInput = {
-          url: this.url,
+          url: baseUrl,
         }
         const variables = { posts }
         return variables
@@ -40,7 +41,6 @@ import { ListPostsInput, Post } from '~/types/graphql/types'
   },
 })
 export default class HomeView extends Vue {
-  @Prop({ required: true }) readonly url!: string
   posts: Array<Post> | null = null
 
   openPost(post: Post | null) {

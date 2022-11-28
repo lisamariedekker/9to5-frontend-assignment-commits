@@ -1,5 +1,5 @@
 <template>
-  <HomeView url="https://district8.net" />
+  <HomeView />
 </template>
 
 <script lang="ts">

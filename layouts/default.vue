@@ -1,6 +1,6 @@
 <template>
   <div class="default">
-    <NavBar url="https://district8.net" />
+    <NavBar />
     <BaseDivider />
     <Nuxt class="layout" />
   </div>

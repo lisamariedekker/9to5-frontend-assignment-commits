@@ -16,16 +16,16 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
+import { baseUrl } from '../../settings'
 
 @Component
 export default class Navbar extends Vue {
   @Prop({ required: false, default: false }) readonly back!: boolean
-  @Prop({ required: true }) readonly url!: string
   faviconData: any | null = null
 
   get faviconUrl(): string | null {
-    if (!this.url) return null
-    const { hostname } = new URL(this.url)
+    if (!baseUrl) return null
+    const { hostname } = new URL(baseUrl)
     if (!hostname) return null
     return 'https://api.faviconkit.com/' + hostname
   }
