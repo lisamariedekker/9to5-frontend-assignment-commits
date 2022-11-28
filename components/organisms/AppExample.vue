@@ -2,13 +2,14 @@
   <div>
     <Loading v-if="$apollo.queries.posts.loading" />
     <div v-else-if="posts">
-      <BaseDivider class="mt-0-5" />
-      <FirstPost
-        v-if="firstPost"
-        :post="firstPost"
-        class="mt-1 mb-1"
-        @open="openPost(firstPost)"
-      />
+      <BaseDivider class="mt-0-5 mb-1" />
+      <div class="first-post mb-1" @click="openPost(firstPost)">
+        <BaseImage
+          v-if="firstPost"
+          :image="firstPost.featuredMedia"
+          :title="firstPost.title"
+        />
+      </div>
       <BaseDivider />
       <OtherPost
         v-for="post in otherPosts"
@@ -65,4 +66,9 @@ export default class AppExample extends Vue {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.first-post {
+  position: relative;
+  cursor: pointer;
+}
+</style>
