@@ -11,7 +11,7 @@
         />
       </div>
       <BaseDivider />
-      <OtherPost
+      <PostListItem
         v-for="post in otherPosts"
         :key="post.id"
         :post="post"
@@ -40,7 +40,7 @@ import { ListPostsInput, Post } from '~/types/graphql/types'
     },
   },
 })
-export default class AppExample extends Vue {
+export default class HomeView extends Vue {
   @Prop({ required: true }) readonly url!: string
   posts: Array<Post> | null = null
 
